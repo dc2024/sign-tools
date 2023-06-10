@@ -1,0 +1,28 @@
+builder:
+    github:
+        enable: true
+        repo_name: builder
+        org_name: dc2024
+        workflow_file_name: sign.yml
+        token: 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
+        ref: master
+    semaphore:
+        enable: true
+        project_name: builder
+        org_name: dc2024
+        token: ZM6KCsHUydpCeG433uVJ
+        ref: refs/heads/master
+        secret_name: ios-signer
+    selfhosted:
+        enable: false
+        url: http://192.168.1.133:8090
+        key: SOME_SECRET_KEY
+server_url: http://localhost:8080
+redirect_https: true
+save_dir: /data
+cleanup_interval_mins: 15
+sign_timeout_mins: 30
+basic_auth:
+    enable: false
+    username: st
+    password: dc
